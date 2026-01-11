@@ -1,4 +1,6 @@
+CXX_FLAGS=-ltirpc -I../HemePure-GPU/dep/install/include/tirpc -L../HemePure-GPU/dep/install/lib
+
 hemeXtract:
-	g++ -Wall -O3 hemeXtract.cc -o hemeXtract
+	${CXX} -Wall -O3 hemeXtract.cc -o hemeXtract ${CXX_FLAGS}
 debug:
-	g++ -Wall -g hemeXtract.cc -o hemeXtract
+	${CXX} -Wall -g hemeXtract.cc -o hemeXtract ${CXX_FLAGS}
